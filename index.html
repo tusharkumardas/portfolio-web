@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-eqiv="X-UA-Compatible" contents="IE-edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Personal portfolio website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>UI/UX DESIGNER</p>
+            <h1>Hi, I'M <span>TUSHAR KUMAR DAS</span><br> from INDIA</h1>
+
+        </div>
+    </div>
+    
+</div>
+<!------about------>
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="tushar.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Hello! My name is Tushar Kumar Das,
+                    and I am currently a student pursuing a Bachelor of Technology (B.Tech) degree
+                    in Computer Science and Engineering (CSE).
+                    Let me tell you a bit more about myself.
+                    Throughout my academic journey, I've developed a diverse set of skills,
+                    ranging from programming in languages like Java, Python, and C++,
+                     to working with databases, web development, and software engineering.
+                      My interests extend to artificial intelligence, machine learning, and cybersecurity,
+                       as I believe these fields hold the key to transforming industries and improving lives.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience & Projects</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UI/UX</span><br>Designing web/app interfaces</li>
+                        <li><span>Web Development</span><br>Web/App Developement</li>
+                        <li><span>App development</span><br>building Android/ios apps</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2024</span><br>Designed a Product Landing Page</li>
+                        <li><span>2024</span><br>Developed Weather Forecasting Webapp</li>
+                        <li><span>2023</span><br>Developed Car parking management system</li>
+                        <li><span>2022</span><br>Developed Car showroom management system</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2023</span><br>Pursuing B.TECH from Arka Jain University,Jharkhand</li>
+                        <li><span>2022</span><br>Intermediate from Atomic Energy Central School,Jadugoda</li>
+                        <li><span>2020</span><br>Matriculate from Atomic Energy Central School,Narwapahar</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-----------contact------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p>tusharkumardas1125@gmail.com</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/tushar-kumar-das-905301256?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+                        <img src="linkedin.png" alt="LinkedIn" width="50" height="50">
+                      </a>
+                      <a href="https://instagram.com/success_voltage_7099?igshid=NGVhN2U2NjQ0Yg==" target="_blank">
+                        <img src="instagram.png" alt="Instagram" width="50" height="50">
+                      </a>
+                      
+                      
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright ©️ tusharkumardas 2024<br>credit-Image by <a href="https://www.freepik.com/free-vector/gradient-futuristic-background-with-connection-concept_18777126.htm#query=technology%20background&position=24&from_view=keyword&track=ais_user&uuid=b2c8dace-5ecf-4faa-8b6a-8769d1a6eb80">Freepik</a></p>
+    </div>
+</div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+</body>
+</html>   
